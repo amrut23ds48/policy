@@ -1,0 +1,52 @@
+:root{
+    --background: #fffffe;
+    --headline: #094067;
+    --para: #5f6c7b;
+    --Button: #3da9fc;
+    --Button-text: #fffffe;
+    --Stroke: #094067;
+    --Main: #fffffe;
+    --Highlight: #3da9fc;
+    --Secondary: #90b4ce;
+    --Tertiary: #ef4565;
+
+    /* For blue background */
+    --Blue-Bg: #d8eefe;
+    --Headline: #094067;
+    --Sub-headline: #5f6c7b;
+    --Card-background: #fffffe;
+    --Card-heading: #094067;
+    --Card-paragraph: #5f6c7b;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body{
+    background-color: var(--background);
+    color: var(--para);
+}
+                                       /* HEADER START*/
+header{
+    width: 100%;
+    height: auto;
+}
+                                       /* HEADER END*/
+
+                                       /* MAIN START*/
+main{
+    width: 100%;
+    height: auto;
+}
+                                        /* MAIN END*/
+    
+                                        /* FOOTER START*/
+footer{
+    width: 100%;
+    height: auto;
+}
+                                        /* FOOTER END*/
