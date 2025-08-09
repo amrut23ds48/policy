@@ -285,6 +285,23 @@
                     <input type="reset" value="Reset">
                 </form>
         </section>
+        <div class="chatbot-slide" >
+            <form id="chatbotform" action="/submitChatbot" method="POST">
+                <div class="form-group">
+                    <label>Domain</label>
+                        <select name="domain">
+                            <option value="">Select</option>
+                            <option value="health">Health</option>
+                                <select name="health-category">
+                                    <option value="personal">Personal</option>
+                                    <option value="family">Family</option>
+                                </select>
+                            <option value="vehicle">Vehicle</option>
+                            <option value="travel">Travel</option>
+                        </select>
+                </div>    
+            </form>
+        </div>
     </main>
     <footer>
         <p>&copy; 2023 AskMyPolicy. All rights reserved.</p>
