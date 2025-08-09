@@ -72,13 +72,218 @@
     </header>
     <main>
         <section>
+            <h1>Get details about your <span>health</span> policy</h1>
+                
+                <form id="personalForm" action="/submitPersonal" method="POST">
+                    <h2>Personal <img src="./icons/user.png" alt="personal" width="20px" height="auto"></h2>
+                    <div class="card">
+                        <div class="form-group">
+                            <label>Enter Your Age</label>
+                            <input type="number" name="age" value="30" min="10">
+                        </div>
+                        <div class="form-group">
+                            <label>Select Policy</label>
+                            <select name="policy">
+                                <option value="">Select</option>
+                                <option value="Tuzya khatir">Tuzya Khatir(goa)</option>
+                                <option value="policy2"></option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Previous dieses</label>
+                            <select name="diseases">
+                                <option value="">Select</option>
+                                <option value="disease1">Disease 1</option>
+                                <option value="disease2">Disease 2</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Policy period(Years)</label>
+                            <input type="number" name="period" value="2" min="1" max="10">
+                        </div>
+                    </div>
+                    <button id="personalCheck">Check eligibility</button>
+                    <input type="submit" value="Ask any question!">
+                    <input type="reset" value="Reset">
+                </form>
+
+                <form id="familyForm" action="/submitFamily" method="POST">
+                    <h2>Family <img src="./icons/parental-control.png" alt="personal" width="20px" height="auto"></h2>
+                    <div class="card">
+                        <div class="form-group">
+                            <label>Members in family</label>
+                            <input type="number" name="members" value="2" min="2" max="5">
+                        </div>
+                        <div class="form-group">
+                            <label>Select Policy</label>
+                            <select name="policy">
+                                <option value="">Select</option>
+                                <option value="meri family">Meri family</option>
+                                <option value="hum sath hai">hum sath hai</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Previous dieses</label>
+                            <select name="diseases">
+                                <option value="">Select</option>
+                                <option value="disease1">Disease 1</option>
+                                <option value="disease2">Disease 2</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Policy period(Years)</label>
+                            <input type="number" name="period" value="2" min="1">
+                        </div>
+                    </div>
+                    <button class="familyCheck">Check eligibility</button>
+                    <input type="submit" value="Ask any question!">
+                    <input type="reset" value="Reset">
+                </form>
 
         </section>
+            
         <section>
+            <h1>Get details about your <span>Vehicle</span> policy</h1>
+                
+                <form id="carForm" action="/submitCar" method="POST">
+                    <h2>Car <img src="./icons/car.png" alt="Car" width="20px" height="auto"></h2>
+                    <div class="card">
+                        <div class="form-group">
+                            <label>Enter Your Age</label>
+                            <input type="number" name="age" value="30" min="10">
+                        </div>
+                        <div class="form-group">
+                            <label>Select Policy</label>
+                            <select name="policy">
+                                <option value="">Select</option>
+                                <option value="Apni car">Apni car </option>
+                                <option value="meri car">meri car </option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>ownership</label>
+                            <select name="ownership">
+                                <option value="">Select</option>
+                                <option value="yes">Yes</option>
+                                <option value="no">No</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>model of car</label>
+                            <select name="model">
+                                <option value="">Select</option>
+                                <option value="ferrari">ferrari</option>
+                                <option value="maruti 800">maruti 800</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button id="carCheck">Check eligibility</button>
+                    <input type="submit" value="Ask any question!">
+                    <input type="reset" value="Reset">
+                </form>
 
+                <form id="bikeForm" action="/submitBike" method="POST">
+                    <h2>Bike <img src="./icons/sportbike.png" alt="personal" width="30px" height="auto"></h2>
+                    <div class="card">
+                        <div class="form-group">
+                            <label>Enter Your Age</label>
+                            <input type="number" name="age" value="22" min="18" max="100">
+                        </div>
+                        <div class="form-group">
+                            <label>Select Policy</label>
+                            <select name="policy">
+                                <option value="">Select</option>
+                                <option value="rider assure">rider assure</option>
+                                <option value="roadies">roadies</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>ownership</label>
+                            <select name="ownership">
+                                <option value="">Select</option>
+                                <option value="yes">Yes</option>
+                                <option value="no">No</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Policy period(Years)</label>
+                            <input type="number" name="period" value="2" min="1">
+                        </div>
+                    </div>
+                    <button class="familyCheck">Check eligibility</button>
+                    <input type="submit" value="Ask any question!">
+                    <input type="reset" value="Reset">
+                </form>
         </section>
-        <section>
 
+        <section>
+            <h1>Get details about your <span>Travel</span> policy</h1>
+                
+                <form id="internationalForm" action="/submitInternational" method="POST">
+                    <h2>Personal <img src="./icons/traveling.png" alt="International" width="20px" height="auto"></h2>
+                    <div class="card">
+                        <div class="form-group">
+                            <label>Enter Your Age</label>
+                            <input type="number" name="age" value="30" min="10">
+                        </div>
+                        <div class="form-group">
+                            <label>Nationality</label>
+                            <select name="nationality">
+                                <option value="">Select</option>
+                                <option value="indian">Indian</option>
+                                <option value="nonIndian">Non-indian</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Passport</label>
+                            <select name="passport">
+                                <option value="">Select</option>
+                                <option value="yes">Yes</option>
+                                <option value="no">No</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Policy period(Days)</label>
+                            <input type="number" name="period" value="2" min="5" max="500">
+                        </div>
+                    </div>
+                    <button id="internationalCheck">Check eligibility</button>
+                    <input type="submit" value="Ask any question!">
+                    <input type="reset" value="Reset">
+                </form>
+
+                <form id="domesticForm" action="/submitDomestic" method="POST">
+                    <h2>Domestic <img src="./icons/india.png" alt="personal" width="20px" height="auto"></h2>
+                    <div class="card">
+                        <div class="form-group">
+                            <label>Enter you age</label>
+                            <input type="number" name="age" value="2" min="10" max="110">
+                        </div>
+                        <div class="form-group">
+                            <label>Select Policy</label>
+                            <select name="policy">
+                                <option value="">Select</option>
+                                <option value="maharashtra darshan">Maharashtra Darshan</option>
+                                <option value="kerala diaries">kerala diaries</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Medical Condition</label>
+                            <select name="medCondition">
+                                <option value="">Select</option>
+                                <option value="dieabetes">Dieabetes</option>
+                                <option value="heart problem">Heart problem</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Policy period(Days)</label>
+                            <input type="number" name="period" value="2" min="10" max="50">
+                        </div>
+                    </div>
+                    <button class="domesticCheck">Check eligibility</button>
+                    <input type="submit" value="Ask any question!">
+                    <input type="reset" value="Reset">
+                </form>
         </section>
     </main>
     <footer>
