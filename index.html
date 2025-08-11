@@ -20,8 +20,9 @@
                 <h1>AskMyPolicy</h1>
             </div>
             <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#ask">Ask <img src="./icons/down-white.png" alt="dropdown" width="45px" height="auto"></a></li>
+                <li id="home"><a href="#home">Home</a></li>
+                <li id="list-ask"><a href="#">Ask <img src="./icons/down-white.png" alt="dropdown" width="20px" height="auto"></a></li>
+                <li><a href="/policies.html">Policies</a></li>
                 <li><a href="/profile.html">Profile</a></li>
             </ul>
         </nav>
@@ -39,33 +40,35 @@
                 <h1><span>Travel</span> without any worries</h1>
                 <img src="./images/travel.svg" alt="Travel policy banner" width="500px" height="auto">
             </div>
+            
         </div>
+        
         <div class="drop-down">
             <div class="domain">
                 <h3>Health</h3>
                 <ul>
-                    <li><a href="#personal-card">Personal</a></li>
-                    <li><a href="#family-card">Family</a></li>
+                    <li><a href="#personalForm">Personal</a></li>
+                    <li><a href="#familyForm">Family</a></li>
                     <li><a href="/policies.html">View Policies</a></li>
-                    <li><a href="#personal-card">Ask Questions</a></li>
+                    <li><a href="#personalForm">Ask Questions</a></li>
                 </ul>
             </div>
             <div class="domain">
                 <h3>Vehicle</h3>
                 <ul>
-                    <li><a href="#car-card">Car</a></li>
-                    <li><a href="#bike-card">Bike</a></li>
+                    <li><a href="#carForm">Car</a></li>
+                    <li><a href="#bikeForm">Bike</a></li>
                     <li><a href="/policies.html">View Policies</a></li>
-                    <li><a href="#car-card">Ask Questions</a></li>
+                    <li><a href="#carForm">Ask Questions</a></li>
                 </ul>
             </div>
             <div class="domain">
                 <h3>Travel</h3>
                 <ul>
-                    <li><a href="#international-card">International</a></li>
-                    <li><a href="#domestic-card">Domestic</a></li>
+                    <li><a href="#internationalForm">International</a></li>
+                    <li><a href="#domesticForm">Domestic</a></li>
                     <li><a href="/policies.html">View Policies</a></li>
-                    <li><a href="#international-card">Ask Questions</a></li>
+                    <li><a href="#internationalForm">Ask Questions</a></li>
                 </ul>
             </div>
         </div>
@@ -295,6 +298,24 @@
         </section>
         <div class="chatbot-slide" >
             <button id="close"><img src="./icons/close.png" alt="close" width="25px" height="auto"></button>
+            <div class="chat-header">
+                Insurance Assistant
+            </div>
+
+            <div class="chat-messages" id="chatMessages">
+                <div class="message bot-message">
+                    <div>Hello! I'm here to help you with your insurance queries. Please select your domain and policy, then ask me anything!</div>
+                    <div class="message-time" id="botTime"></div>
+                </div>
+            </div>
+
+            <div class="typing-indicator" id="typingIndicator">
+                <div class="typing-dots">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
             <form id="chatbotform" action="/submitChatbot" method="POST">
                 <div class="form-group">
                     <label>Domain</label>
@@ -345,6 +366,18 @@
     <footer>
         <p>&copy; 2023 AskMyPolicy. All rights reserved.</p>
     </footer>
+
+    <script>
+        const menuBtn = document.querySelector('#list-ask'); // or document.getElementById('list-ask')
+        const dropdown = document.querySelector('.drop-down');
+
+        menuBtn.addEventListener('click', () => {
+        dropdown.style.display = dropdown.style.display === 'flex' ? 'none' : 'flex';
+        
+});
+
+    </script>
     <script src="./js/form-sync-js.js"></script>
+    <script src="./js/chatbot.js"></script>
 </body>
 </html>

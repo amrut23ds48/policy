@@ -200,11 +200,6 @@ document.addEventListener('DOMContentLoaded', function() {
             
             const searchInput = document.getElementById('search');
             const query = searchInput.value.trim();
-            
-            if (!query) {
-                alert('Please enter a question.');
-                return;
-            }
 
             // Here you can add the actual chatbot submission logic
             console.log('Chatbot Query:', {

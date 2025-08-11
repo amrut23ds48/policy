@@ -30,13 +30,121 @@ body{
     background-color: var(--background);
     color: var(--para);
 }
-                                       /* HEADER START*/
+
+                                    /* HEADER START*/
 header{
     width: 100%;
     height: auto;
 }
-                                       /* HEADER END*/
+nav{
+    background-color: var(--Secondary);
+    display: flex;
+    color: var(--Button-text);
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 10px;
+}
+.nav-left{
+    display: flex;
+    gap: 5px;
+    align-items: center;
+} 
+nav ul{
+    list-style: none;
+    display: flex;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+}
+nav ul li {
+    transition: box-shadow 0.2s ease; /* smooth animation */
+}
 
+nav ul li:hover {
+    box-shadow: -5px 5px 15px 9px rgba(0, 0, 0, 0.25);
+}
+
+#list-ask{
+    display: flex;
+    align-items: center;
+}
+#list-ask img{
+    padding-left: 5px;
+}
+li a{
+    text-decoration: none;
+    color: var(--Button-text);
+    display: flex;
+    align-items: center;
+    padding: 0px 20px;
+    height: 45px;
+}
+
+.slide-show{
+    display: flex;
+    flex-wrap: nowrap;
+}
+.banner{
+    display: flex;
+    flex: 1 0 auto;
+    width: 100%;
+    height: auto;
+    justify-content: space-around;
+    align-items: center;
+}
+.banner h1{
+    color: var(--Headline);
+    font-size: 2.5rem;
+    text-align: center;
+}
+.banner span{
+    color: var(--Tertiary)
+}
+.hidden{
+    display: none;
+}
+.drop-down{
+    position: absolute;
+    top: 45px;
+    right: 0px;
+    width: 60%;
+    height: auto;
+    z-index: 10;
+    color: var(--Headline);
+    background-color: var(--Card-background);
+    box-shadow: -8px 10px 13.699999809265137px 7px rgba(0, 0, 0, 0.25);
+    display: flex;
+    justify-content: space-around;
+}
+.domain{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.drop-down h3{
+    font-family: 'Lato', sans-serif;
+    color: var(--Card-heading);
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.drop-down ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.drop-down ul li a{
+    text-decoration: none;
+    color: rgba(119, 117, 117, 0.589);
+    padding: 10px 20px;
+}
+.drop-down ul li a:hover{
+    color: var(--Highlight);
+    font-weight: bold;
+}                                  /* HEADER END*/
                                        /* MAIN START*/
 main{
     width: 100%;
