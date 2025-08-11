@@ -220,7 +220,7 @@
             <h1>Get details about your <span>Travel</span> policy</h1>
                 
                 <form id="internationalForm" action="/submitInternational" method="POST">
-                    <h2>Personal <img src="./icons/traveling.png" alt="International" width="20px" height="auto"></h2>
+                    <h2>International <img src="./icons/traveling.png" alt="International" width="20px" height="auto"></h2>
                     <div class="card">
                         <div class="form-group">
                             <label>Enter Your Age</label>
@@ -245,6 +245,14 @@
                         <div class="form-group">
                             <label>Policy period(Days)</label>
                             <input type="number" name="period" value="2" min="5" max="500">
+                        </div>
+                        <div class="form-group">
+                            <label>Select Policy</label>
+                            <select name="policy">
+                                <option value="">Select</option>
+                                <option value="europe dream">Europe Dream</option>
+                                <option value="australian open">Australian Open</option>
+                            </select>
                         </div>
                     </div>
                     <button id="internationalCheck">Check eligibility</button>
@@ -286,25 +294,57 @@
                 </form>
         </section>
         <div class="chatbot-slide" >
+            <button id="close"><img src="./icons/close.png" alt="close" width="25px" height="auto"></button>
             <form id="chatbotform" action="/submitChatbot" method="POST">
                 <div class="form-group">
                     <label>Domain</label>
                         <select name="domain">
                             <option value="">Select</option>
                             <option value="health">Health</option>
-                                <select name="health-category">
-                                    <option value="personal">Personal</option>
-                                    <option value="family">Family</option>
-                                </select>
+                               <optgroup>
+                                <option value="personal">Personal</option>
+                                <option value="family">Family</option>
+                               </optgroup>
                             <option value="vehicle">Vehicle</option>
+                                 <optgroup>
+                                  <option value="car">Car</option>
+                                  <option value="bike">Bike</option>
+                                 </optgroup>
                             <option value="travel">Travel</option>
+                                    <optgroup>
+                                    <option value="international">International</option>
+                                    <option value="domestic">Domestic</option>
+                                    </optgroup>
                         </select>
-                </div>    
+                </div>
+                <div class="form-group">
+                            <label>Select Policy</label>
+                            <select name="policy">
+                                <option value="">Select</option>
+                                <option value="maharashtra darshan">Maharashtra Darshan</option>
+                                <option value="kerala diaries">kerala diaries</option>
+                                <option value="europe dream">Europe Dream</option>
+                                <option value="australian open">Australian Open</option>
+                                <option value="Tuzya khatir">Tuzya Khatir(goa)</option>
+                                <option value="meri family">Meri family</option>
+                                <option value="hum sath hai">hum sath hai</option>
+                                <option value="Apni car">Apni car</option>
+                                <option value="meri car">meri car</option>
+                                <option value="rider assure">rider assure</option>
+                                <option value="roadies">roadies</option>
+                            </select>
+                            <img src="./icons/pdf.png" alt="see policy" width="20px" height="auto">
+                </div>
+                <div class="form-group">
+                    <input type="text" name="search" id="search" placeholder="Ask your question here..."> 
+                    <button type="submit" id="chatbotSubmit"><img src="./icons/application.png" alt="enter" width="20" height="auto"></button>
+                </div>
             </form>
         </div>
     </main>
     <footer>
         <p>&copy; 2023 AskMyPolicy. All rights reserved.</p>
     </footer>
+    <script src="./js/form-sync-js.js"></script>
 </body>
 </html>
